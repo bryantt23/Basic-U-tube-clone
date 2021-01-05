@@ -18,10 +18,28 @@ class App extends Component {
         {
           videoId: 0,
           title: 'Funny Golden Retriever Dogs',
-          imageSrc: goldenRetrieverImg
+          imageSrc: goldenRetrieverImg,
+          comments: [{ user: 'John', comment: 'I LOVE Goldens' }]
         },
-        { videoId: 1, title: 'Doge The Famous Dog Meme', imageSrc: dogeImg },
-        { videoId: 2, title: 'Bizarre Cat videos', imageSrc: catImg }
+        {
+          videoId: 1,
+          title: 'Doge The Famous Dog Meme',
+          imageSrc: dogeImg,
+          comments: [
+            { user: 'Jane', comment: 'Such cuteness' },
+            { user: 'John', comment: 'Shiba for the win!' }
+          ]
+        },
+        {
+          videoId: 2,
+          title: 'Bizarre Cat videos',
+          imageSrc: catImg,
+          comments: [
+            { user: 'Jane', comment: 'I love kittens' },
+            { user: 'John', comment: 'Cats are the best' },
+            { user: 'Jane', comment: 'Kittens are the best' }
+          ]
+        }
       ]
     };
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Comments from './Comments';
 
 export class Video extends Component {
   render() {
@@ -11,18 +12,20 @@ export class Video extends Component {
       //     {JSON.stringify(videoId)}
       //     {/* {JSON.stringify(videos)} */}
       //   </div>
-
-      <div
-        key={videoId}
-        style={{
-          borderWidth: 2,
-          borderStyle: 'solid',
-          cursor: 'pointer',
-          margin: 10
-        }}
-      >
-        <img style={{ maxHeight: 300 }} alt='blah' src={imageSrc} />
-        <h3>{title}</h3>
+      <div>
+        <div
+          key={videoId}
+          style={{
+            borderWidth: 2,
+            borderStyle: 'solid',
+            cursor: 'pointer',
+            margin: 10
+          }}
+        >
+          <img style={{ maxHeight: 300 }} alt='blah' src={imageSrc} />
+          <h3>{title}</h3>
+        </div>
+        <Comments />
       </div>
     );
   }
