@@ -5,7 +5,7 @@ export class Video extends Component {
   render() {
     const arr = this.props.videoId.history.location.pathname.split('/');
     const videoId = arr[arr.length - 1];
-    const { videos } = this.props;
+    const { videos, loggedInUser } = this.props.state;
     const { imageSrc, title } = videos[videoId];
     return (
       //   <div>
@@ -25,7 +25,7 @@ export class Video extends Component {
           <img style={{ maxHeight: 300 }} alt='blah' src={imageSrc} />
           <h3>{title}</h3>
         </div>
-        <Comments />
+        <Comments loggedInUser={loggedInUser} />
       </div>
     );
   }

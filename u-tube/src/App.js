@@ -67,7 +67,7 @@ class App extends Component {
           <Switch>
             <Route
               path='/video'
-              render={videoId => <Video videoId={videoId} videos={videos} />}
+              render={videoId => <Video videoId={videoId} state={this.state} />}
             />
             <Route path='/'>
               <Main videos={videos} />
