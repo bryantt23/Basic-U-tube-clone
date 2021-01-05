@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/u-tube/static/css/main.8b9638a6.chunk.css",
+    "main.js": "/u-tube/static/js/main.8f0b9bfd.chunk.js",
+    "main.js.map": "/u-tube/static/js/main.8f0b9bfd.chunk.js.map",
+    "runtime-main.js": "/u-tube/static/js/runtime-main.497472a2.js",
+    "runtime-main.js.map": "/u-tube/static/js/runtime-main.497472a2.js.map",
+    "static/js/2.cdc912a7.chunk.js": "/u-tube/static/js/2.cdc912a7.chunk.js",
+    "static/js/2.cdc912a7.chunk.js.map": "/u-tube/static/js/2.cdc912a7.chunk.js.map",
+    "static/js/3.59088fb0.chunk.js": "/u-tube/static/js/3.59088fb0.chunk.js",
+    "static/js/3.59088fb0.chunk.js.map": "/u-tube/static/js/3.59088fb0.chunk.js.map",
+    "index.html": "/u-tube/index.html",
+    "static/css/main.8b9638a6.chunk.css.map": "/u-tube/static/css/main.8b9638a6.chunk.css.map",
+    "static/js/2.cdc912a7.chunk.js.LICENSE.txt": "/u-tube/static/js/2.cdc912a7.chunk.js.LICENSE.txt",
+    "static/media/cat.4a84328a.jpg": "/u-tube/static/media/cat.4a84328a.jpg",
+    "static/media/doge.f332d192.jpg": "/u-tube/static/media/doge.f332d192.jpg",
+    "static/media/golden-retriever.96b6e11a.jpg": "/u-tube/static/media/golden-retriever.96b6e11a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.497472a2.js",
+    "static/js/2.cdc912a7.chunk.js",
+    "static/css/main.8b9638a6.chunk.css",
+    "static/js/main.8f0b9bfd.chunk.js"
+  ]
+}
