@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './Header.css';
 
-export class Header extends Component {
+class Header extends Component {
   render() {
     const { loggedInUser } = this.props;
     return (
@@ -18,7 +18,7 @@ export class Header extends Component {
           </li> */}
           <li style={{ float: 'right' }}>
             {loggedInUser === null ? (
-              <p class='header-text'>
+              <p className='header-text'>
                 <button onClick={() => this.props.signIn('John')}>
                   Sign in as John
                 </button>

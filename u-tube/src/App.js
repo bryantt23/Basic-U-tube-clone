@@ -2,6 +2,7 @@ import goldenRetrieverImg from './images/golden-retriever.jpg';
 import dogeImg from './images/doge.jpg';
 import catImg from './images/cat.jpg';
 import Header from './components/Header';
+import Main from './components/Main';
 import './App.css';
 import { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
@@ -33,7 +34,7 @@ class App extends Component {
   };
 
   render() {
-    const { loggedInUser } = this.state;
+    const { loggedInUser, videos } = this.state;
 
     return (
       <Router>
@@ -43,8 +44,12 @@ class App extends Component {
             loggedInUser={loggedInUser}
             signOut={this.signOut}
             signIn={this.signIn}
-          />
-          Hi
+          />{' '}
+          <Switch>
+            <Route path='/'>
+              <Main videos={videos} />
+            </Route>
+          </Switch>
         </div>
       </Router>
     );
