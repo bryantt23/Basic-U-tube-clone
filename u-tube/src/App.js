@@ -10,7 +10,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      loggedInUser: 'John',
+      loggedInUser: null,
       users: ['Jane', 'John'],
       videos: [
         {
@@ -24,6 +24,10 @@ class App extends Component {
     };
   }
 
+  signIn = name => {
+    this.setState({ loggedInUser: name });
+  };
+
   signOut = () => {
     this.setState({ loggedInUser: null });
   };
@@ -35,7 +39,11 @@ class App extends Component {
       <Router>
         {' '}
         <div className='App'>
-          <Header loggedInUser={loggedInUser} signOut={this.signOut} />
+          <Header
+            loggedInUser={loggedInUser}
+            signOut={this.signOut}
+            signIn={this.signIn}
+          />
           Hi
         </div>
       </Router>

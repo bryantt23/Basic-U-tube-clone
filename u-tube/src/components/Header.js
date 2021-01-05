@@ -19,13 +19,17 @@ export class Header extends Component {
           <li style={{ float: 'right' }}>
             {loggedInUser === null ? (
               <p class='header-text'>
-                <button>Sign in as John</button>
-                <button>Sign in as Jane</button>
+                <button onClick={() => this.props.signIn('John')}>
+                  Sign in as John
+                </button>
+                <button onClick={() => this.props.signIn('Jane')}>
+                  Sign in as Jane
+                </button>
               </p>
             ) : (
               <p class='header-text'>
                 Logged in as: {loggedInUser}{' '}
-                <button onClick={this.props.signOut}>Sign out</button>
+                <button onClick={() => this.props.signOut()}>Sign out</button>
               </p>
             )}
           </li>
