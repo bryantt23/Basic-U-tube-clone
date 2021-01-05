@@ -6,7 +6,8 @@ export class Video extends Component {
     const arr = this.props.videoId.history.location.pathname.split('/');
     const videoId = arr[arr.length - 1];
     const { videos, loggedInUser } = this.props.state;
-    const { imageSrc, title } = videos[videoId];
+    const video = videos[videoId];
+    const { imageSrc, title, comments } = video;
     return (
       //   <div>
       //     {JSON.stringify(videoId)}
@@ -25,7 +26,12 @@ export class Video extends Component {
           <img style={{ maxHeight: 300 }} alt='blah' src={imageSrc} />
           <h3>{title}</h3>
         </div>
-        <Comments loggedInUser={loggedInUser} />
+        <Comments
+          loggedInUser={loggedInUser}
+          comments={comments}
+          videoId={videoId}
+          addComment={this.props.addComment}
+        />
       </div>
     );
   }

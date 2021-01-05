@@ -12,7 +12,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      loggedInUser: null,
+      loggedInUser: 'John',
       users: ['Jane', 'John'],
       videos: [
         {
@@ -52,6 +52,12 @@ class App extends Component {
     this.setState({ loggedInUser: null });
   };
 
+  addComment = (videoId, user, comment) => {
+    const videosCopy = this.state.videos;
+    videosCopy[videoId]['comments'].push({ user, comment });
+    this.setState({ videos: videosCopy });
+  };
+
   render() {
     const { loggedInUser, videos } = this.state;
 
@@ -67,7 +73,13 @@ class App extends Component {
           <Switch>
             <Route
               path='/video'
-              render={videoId => <Video videoId={videoId} state={this.state} />}
+              render={videoId => (
+                <Video
+                  videoId={videoId}
+                  state={this.state}
+                  addComment={this.addComment}
+                />
+              )}
             />
             <Route path='/'>
               <Main videos={videos} />
