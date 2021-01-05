@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+import goldenRetrieverImg from './images/golden-retriever.jpg';
+import dogeImg from './images/doge.jpg';
+import catImg from './images/cat.jpg';
+import Header from './components/Header';
 import './App.css';
+import { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      loggedInUser: 'John',
+      users: ['Jane', 'John'],
+      videos: [
+        {
+          videoId: 1,
+          title: 'Funny Golden Retriever Dogs',
+          imageSrc: goldenRetrieverImg
+        },
+        { videoId: 2, title: 'Doge The Famous Dog Meme', imageSrc: dogeImg },
+        { videoId: 3, title: 'Bizarre Cat videos', imageSrc: catImg }
+      ]
+    };
+  }
+
+  signOut = () => {
+    this.setState({ loggedInUser: null });
+  };
+
+  render() {
+    const { loggedInUser } = this.state;
+
+    return (
+      <Router>
+        {' '}
+        <div className='App'>
+          <Header loggedInUser={loggedInUser} signOut={this.signOut} />
+          Hi
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
